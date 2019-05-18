@@ -13,6 +13,7 @@ const (
 
 func main() {
 	plugin.Serve(&plugin.ServeConfig{
+		HandshakeConfig: pkg.DefaultHandshakeConfig,
 		Plugins: map[string]plugin.Plugin{
 			pluginRepoURL: &pkg.NetRPCWorker{Impl: generator.NewMockGenerator()},
 		},
