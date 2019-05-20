@@ -12,6 +12,7 @@ const (
 )
 
 func main() {
+	pkg.RegisterGobTypes()
 	plugin.Serve(&plugin.ServeConfig{
 		HandshakeConfig: pkg.DefaultHandshakeConfig,
 		Plugins: map[string]plugin.Plugin{

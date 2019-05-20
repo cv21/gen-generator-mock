@@ -8,6 +8,10 @@ github.com/cv21/gen v0.0.0-20190517091810-42eddcb6da19 h1:fq2mOhHG2gHdE0nRk4M9oL
 github.com/cv21/gen v0.0.0-20190517091810-42eddcb6da19/go.mod h1:rlELgqpe6+m3qBt8HYwmVNNXB5H4+v0lK2SnCYTWZCk=
 github.com/cv21/gen v0.0.0-20190518134137-4680ac34787b h1:y0MDVEHMDT24A1WCLMnHpCEXn+ZM/voRXDmqJO4Q64w=
 github.com/cv21/gen v0.0.0-20190518134137-4680ac34787b/go.mod h1:ASrtIvtINFzI/hTnP1kwI77PZV1Frpz5BzbJYJI4kOU=
+github.com/cv21/gen v0.0.0-20190518185123-f524cba0a0e9 h1:1l509bGO8HiB5q6yLhT9Vg4HwpR1N3QEfqhdNOyzM94=
+github.com/cv21/gen v0.0.0-20190518185123-f524cba0a0e9/go.mod h1:ASrtIvtINFzI/hTnP1kwI77PZV1Frpz5BzbJYJI4kOU=
+github.com/cv21/gen v0.0.0-20190520110304-9393a5c0cd36 h1:iSnhHm/cJIw21T0GpCi2s3/fEXh3EutsI7j9cJtIkzY=
+github.com/cv21/gen v0.0.0-20190520110304-9393a5c0cd36/go.mod h1:sYxRo0fs5OQHsTgkwqhJh/2hkD1BfE5P5evBPUyz+Bs=
 github.com/cv21/gen-generator-mock v1.0.0/go.mod h1:u+QUNJ7kJX+TumoJiuaPzffJJrRTowMmUm9AFndnwjo=
 github.com/dave/jennifer v1.3.0 h1:p3tl41zjjCZTNBytMwrUuiAnherNUZktlhPTKoF/sEk=
 github.com/dave/jennifer v1.3.0/go.mod h1:fIb+770HOpJ2fmN9EPPKOqm1vMGhB+TwXKMZhrIygKg=
