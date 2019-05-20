@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	pluginRepoURL = "github.com/cv21/gen-generator-mock@v1.0.1"
+	pluginRepoURL = "github.com/cv21/gen-generator-mock@v1.0.0"
 )
 
 func main() {
