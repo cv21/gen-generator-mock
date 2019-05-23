@@ -5,3 +5,7 @@ It is a generator for [gen](https://github.com/cv21/gen) which is able to genera
 Generates [mockery](https://github.com/vektra/mockery)-compatible code for [testify](https://github.com/stretchr/testify).
 
 See examples directory to discover generated code.
+
+#### Description
+
+See [description](DESCRIPTION.md) which covers all plugin parameters.

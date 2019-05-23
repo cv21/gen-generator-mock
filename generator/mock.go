@@ -187,7 +187,7 @@ func typeQual(params *generatorParams, t types.Type) *Statement {
 }
 
 // Allocates and returns new structure of mockGenerator.
-func NewMockGenerator() pkg.Generator {
+func NewGenerator() pkg.Generator {
 	return &mockGenerator{
 		logger: hclog.New(&hclog.LoggerOptions{
 			Level:      hclog.Trace,

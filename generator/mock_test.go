@@ -61,5 +61,5 @@ func TestMock_Generate(t *testing.T) {
 		},
 	}
 
-	pkg.RunTestCases(t, testCases, NewMockGenerator(), pkg.WithGoldenFileGeneration())
+	pkg.RunTestCases(t, testCases, NewGenerator(), pkg.WithGoldenFileGeneration())
 }
