@@ -15,18 +15,34 @@ import (
 const (
 	// It is useful for comments in generated files.
 	pluginRepoURL = "github.com/cv21/gen-generator-mock"
-	pluginVersion = "1.0.1"
+	pluginVersion = "1.0.0"
 
 	mockPackage = "github.com/stretchr/testify/mock"
 )
 
 type (
 	// It is custom parameters for mock generator.
-	GeneratorParams struct {
-		InterfaceName          string `json:"interface_name"`
-		OutPathTemplate        string `json:"out_path_template"`
-		SourcePackagePath      string `json:"source_package_path"`
-		TargetPackagePath      string `json:"target_package_path"`
+	generatorParams struct {
+		// This is name of interface to mock.
+		// Example: SomeService
+		InterfaceName string `json:"interface_name"`
+
+		// It is output path template.
+		// It applies %s literal which holds interface name in snack_case.
+		// Example: ./generated/%s_mock_gen.go
+		OutPathTemplate string `json:"out_path_template"`
+
+		// It is package of source file.
+		// Example: github.com/cv21/gen-generator-mock/examples/stringsvc
+		SourcePackagePath string `json:"source_package_path"`
+
+		// It is target package path.
+		// Example: github.com/cv21/gen-generator-mock/examples/stringsvc/bla
+		TargetPackagePath string `json:"target_package_path"`
+
+		// It is a template for custom struct naming.
+		// It applies %s literal which holds interface name.
+		// Example: MyPrettyMockOf%s
 		MockStructNameTemplate string `json:"mock_struct_name_template"`
 	}
 
@@ -38,7 +54,7 @@ type (
 // Implements Generator interface.
 // Generates mock files.
 func (m *mockGenerator) Generate(p *pkg.GenerateParams) (*pkg.GenerateResult, error) {
-	params := &GeneratorParams{}
+	params := &generatorParams{}
 	err := json.Unmarshal(p.Params, params)
 	if err != nil {
 		return nil, err
@@ -95,7 +111,7 @@ func (m *mockGenerator) generateType(mockStructName, interfaceName string) *Stat
 //		return r0
 // }
 //
-func (m *mockGenerator) generateMethod(params *GeneratorParams, interfaceName, mockStructName string, method *types.Function) *Statement {
+func (m *mockGenerator) generateMethod(params *generatorParams, interfaceName, mockStructName string, method *types.Function) *Statement {
 	return Commentf("%s provides a mock function for method %s of interface %s.", method.Name, method.Name, interfaceName).Line().
 		Func().Params(Id("_m").Id(fmt.Sprintf("*%s", mockStructName))).Id(method.Name).ParamsFunc(func(g *Group) {
 		for _, a := range method.Args {
@@ -166,7 +182,7 @@ func (m *mockGenerator) buildMockStructName(template string, interfaceName strin
 }
 
 // It is a convenient func for calling pkg.TypeQual.
-func typeQual(params *GeneratorParams, t types.Type) *Statement {
+func typeQual(params *generatorParams, t types.Type) *Statement {
 	return pkg.TypeQual(params.SourcePackagePath, params.TargetPackagePath, t)
 }
 

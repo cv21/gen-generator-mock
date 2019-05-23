@@ -13,7 +13,7 @@ func TestMock_Generate(t *testing.T) {
 			Params: `
 {
 	"interface_name": "StringService",
-	"out_path_template": "./generated/%s_mock_gen.go",
+	"out_path_template": "./%s_mock_gen.go",
 	"source_package_path": "github.com/cv21/gen/examples/stringsvc",
 	"target_package_path": "github.com/cv21/gen/examples/stringsvc/bla"
 }`,
@@ -23,7 +23,7 @@ func TestMock_Generate(t *testing.T) {
 			Params: `
 {
 	"interface_name": "SomeService",
-	"out_path_template": "./generated/%s_mock_gen.go",
+	"out_path_template": "./%s_mock_gen.go",
 	"source_package_path": "github.com/cv21/gen/examples/somesvc",
 	"target_package_path": "github.com/cv21/gen/examples/somesvc/bla"
 }`,
@@ -33,7 +33,7 @@ func TestMock_Generate(t *testing.T) {
 			Params: `
 {
 	"interface_name": "SomeService",
-	"out_path_template": "./generated/%s_mock_gen.go",
+	"out_path_template": "./%s_mock_gen.go",
 	"source_package_path": "github.com/cv21/gen/examples/somesvc",
 	"target_package_path": "github.com/cv21/gen/examples/somesvc/bla"
 }`,
@@ -43,7 +43,7 @@ func TestMock_Generate(t *testing.T) {
 			Params: `
 {
 	"interface_name": "SomeService",
-	"out_path_template": "./generated/%s_mock_gen.go",
+	"out_path_template": "./%s_mock_gen.go",
 	"source_package_path": "github.com/cv21/gen/examples/somesvc",
 	"target_package_path": "github.com/cv21/gen/examples/somesvc/bla"
 }`,
@@ -53,7 +53,7 @@ func TestMock_Generate(t *testing.T) {
 			Params: `
 {
 	"interface_name": "SomeService",
-	"out_path_template": "./generated/%s_mock_gen.go",
+	"out_path_template": "./%s_mock_gen.go",
 	"source_package_path": "github.com/cv21/gen/examples/somesvc",
 	"target_package_path": "github.com/cv21/gen/examples/somesvc/bla",
 	"mock_struct_name_template": "MockBlaBla%s"
@@ -61,5 +61,5 @@ func TestMock_Generate(t *testing.T) {
 		},
 	}
 
-	pkg.RunTestCases(t, testCases, NewMockGenerator())
+	pkg.RunTestCases(t, testCases, NewMockGenerator(), pkg.WithGoldenFileGeneration())
 }
