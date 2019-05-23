@@ -4,8 +4,8 @@
       "path": "./generator/mock.go",
       "generators": [
         {
-          "repository": "",
-          "version": "",
+          "repository": "github.com/cv21/gen-generator-base",
+          "version": "1.0.0",
           "params": {
             "generator_name":"gen-generator-mock",
             "module_repository":"github.com/cv21/gen-generator-mock",
