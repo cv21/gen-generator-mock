@@ -5,7 +5,7 @@
       "generators": [
         {
           "repository": "github.com/cv21/gen-generator-base",
-          "version": "v1.0.0",
+          "version": "v1.0.1",
           "params": {
             "generator_name":"gen-generator-mock",
             "module_repository":"github.com/cv21/gen-generator-mock",
