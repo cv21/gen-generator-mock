@@ -1,4 +1,4 @@
-module github.com/cv21/gen-generator-mock
+module github.com/cv21/gen-interface-mock
 
 go 1.12
 
