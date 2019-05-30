@@ -14,7 +14,7 @@ import (
 
 const (
 	// It is useful for comments in generated files.
-	pluginRepoURL = "github.com/cv21/gen-generator-mock"
+	pluginRepoURL = "github.com/cv21/gen-interface-mock"
 	pluginVersion = "1.0.0"
 
 	mockPackage = "github.com/stretchr/testify/mock"
