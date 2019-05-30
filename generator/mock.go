@@ -33,11 +33,11 @@ type (
 		OutPathTemplate string `json:"out_path_template"`
 
 		// It is package of source file.
-		// Example: github.com/cv21/gen-generator-mock/examples/stringsvc
+		// Example: github.com/cv21/gen-interface-mock/examples/stringsvc
 		SourcePackagePath string `json:"source_package_path"`
 
 		// It is target package path.
-		// Example: github.com/cv21/gen-generator-mock/examples/stringsvc/bla
+		// Example: github.com/cv21/gen-interface-mock/examples/stringsvc/bla
 		TargetPackagePath string `json:"target_package_path"`
 
 		// It is a template for custom struct naming.
